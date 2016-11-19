@@ -6,6 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 app.use(express.static('ui'));
 app.use(express.static('js'));
+app.use(express.static('css'));
+app.use(express.static('images'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
